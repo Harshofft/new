@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let totalprice = parent(prompt("Enter the total price of your purchase"))
+    let discount 
+    if (totalprice >= 1000) {
+        discount = totalprice *0.2
+    } else if (totalprice >= 500) {
+        discount = totalprice *0.15
+    } else {
+        discount = totalprice *0.1
+    }
+    let finalprice = totalprice - discount
+    console.log("Your discount is " + discount + " and your final price is " + finalprice)
+</script>
+</body>
+</html>
