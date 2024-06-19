@@ -7,17 +7,22 @@
 </head>
 <body>
 <script>
-    let totalprice = parent(prompt("Enter the total price of your purchase"))
-    let discount 
-    if (totalprice >= 1000) {
-        discount = totalprice *0.2
-    } else if (totalprice >= 500) {
-        discount = totalprice *0.15
-    } else {
-        discount = totalprice *0.1
+    let totalprice = parseInt(prompt("Enter the total price of your purchase"));
+    let discount =0;
+    let finalprice = totalprice;
+    if (totalprice <= 1000) {
+        discount = totalprice/15;
+        finalprice = totalprice - discount;
+        console.log("You have a discount of " + discount +"your final price is "+finalprice);
     }
-    let finalprice = totalprice - discount
-    console.log("Your discount is " + discount + " and your final price is " + finalprice)
+    else if (totalprice <=500 && totalprice > 1000) {
+        discount = totalprice/10;
+        finalprice = totalprice - discount;
+        console.log("You have a discount of " + discount +"your final price is "+finalprice);
+    }
+    else{
+        console.log("You have no discount");
+    }
 </script>
 </body>
 </html>
